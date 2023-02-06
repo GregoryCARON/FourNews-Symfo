@@ -20,6 +20,7 @@ framework:
 
 when@test:
     framework:
+        ide: 'myide://open?url=file://%%f&line=%%l'
         test: true
         session:
             storage_factory_id: session.storage.factory.mock_file

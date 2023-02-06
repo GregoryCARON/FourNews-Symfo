@@ -1,0 +1,21 @@
+<h1 class="bTitle">{{ title }}</h1>
+{% if articles is defined %}
+    {% for article in articles.articles %}
+        <div class="article">
+            <div class="content">
+                <div class="author">
+                    <span class="auth">Auteur : </span>{{ article.author }}
+                </div>
+                <h1>{{ article.title }}</h1>
+                <div class="description">
+                    <p>{{ article.description }}</p>
+                    <p><a href="{{ cRoute }}/{{ loop.index }}">Lire la suite ...</a></p>
+                    <p>{{ article.publishedAt }}</p>
+                </div>
+            </div>
+            <div>
+                <img class="imgArticle" src="{{ article.urlToImage }}" alt="Image de l'article">
+            </div>
+        </div>
+    {% endfor %}
+{% endif%}

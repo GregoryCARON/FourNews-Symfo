@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Article{% endblock %}
+
+{% block body %}
+{% include '_partials/articleLoop.html.twig' %}
+
+
+
+
+
+    {#    {% for  ArticleGoogle in ArticlesGoogle %}#}
+    {#        {{ loop.index }} - {{ ArticleGoogle.articles.source.author }}#}
+    {#    {% endfor %}#}
+
+
+
+    {#    {% for article in ArticlesGoogle %}#}
+    {#        #}{# json_decode() part is imaginary #}
+    {#        {% set obj = article.articles %}#}
+    {#        {{ obj.author }}#}
+    {#    {% endfor %}#}
+
+
+
+    {#    {% for ArticleGoogle in ArticlesGoogle %}#}
+    {#        <div class="article">#}
+    {#            <div class="content">#}
+    {#                <div class="author">#}
+    {#                    <span class="auth">Auteur : </span>{{ ArticleGoogle.articles.source.author }}#}
+    {#                </div>#}
+    {#                <h1>{{ ArticleGoogle.title }}</h1>#}
+    {#                <div class="description">#}
+    {#                    <p>{{ ArtitcleGoogle.description }}</p>#}
+    {#                    <p><a class="aLinks" id="art${i}">Lire la suite ...</a></p>#}
+    {#                    <p>{{ ArticleGoogle.publishedAt }}</p>#}
+    {#                </div>#}
+    {#            </div>#}
+    {#            <div>#}
+    {#                <img class="imgArticle" src="{{ ArticleGoogle.urlToImage }}" alt="">#}
+    {#            </div>#}
+    {#        </div>#}
+    {#    {% endfor %}#}
+{% endblock %}

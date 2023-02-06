@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div id="news">
+    <div class="article">
+    {% for article in articles.articles %}
+        {% if id == loop.index %}
+            <span class="auth">Auteur : </span>{% if article.author == null %}Inconnu(e){% else %}{{ article.author }}{% endif %}
+            <h1>{{ article.title }}</h1>
+            <div class="description">
+                <p>{{ article.description }}</p>
+                <p>{{ article.content }}</p>
+                <p>{{ article.publishedAt }}</p>
+            </div>
+            <div>
+                <img class="imgArticle" src="{{ article.urlToImage }}" alt="Image de l'article">
+            </div>
+            </div>
+            </div>
+        {% endif %}
+    {% endfor %}
+{% endblock %}
